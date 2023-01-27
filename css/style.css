@@ -12,6 +12,12 @@ a:visited {
     color: black;
     text-decoration: none;
 }
+
+/* Reset bootstrap */
+ul{
+    margin: 0;
+}
+
 /* Generales */
 
 body{
@@ -21,6 +27,30 @@ body{
 
 main{
     min-height: 100vh;
+}
+
+h1{
+    margin: 0;
+}
+
+h2{
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+h3{
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+h4{
+    font-size: 1rem;
+    margin: 0;
+}
+
+h5{
+    font-size: 0.9rem;
+    margin: 0;
 }
 
 .parrafos, .pIndex{
@@ -118,6 +148,7 @@ h2{
 p{
     text-align: center;
     max-width: 600px;
+    margin: 0;
 }
 
 .destacados{
