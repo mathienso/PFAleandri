@@ -4,7 +4,14 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+a:link {
+    color: black;
+    text-decoration: none;
+}
+a:visited {
+    color: black;
+    text-decoration: none;
+}
 /* Generales */
 
 body{
@@ -12,11 +19,15 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
+main{
+    min-height: 100vh;
+}
+
 .parrafos, .pIndex{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    margin: 40px 0;
 }
 
 /* Header */
@@ -114,11 +125,13 @@ p{
     justify-content: space-around;
     align-items: center;
     text-align: center;
+    gap: 1rem;
     padding: 1rem;
+    margin: 0 200px;
 }
 
 .destacados img{
-    max-height: 250px;
+    max-height: 115px;
     width: auto;
 }
 
@@ -130,25 +143,20 @@ p{
     border-radius: 5px;
 }
 
-.pIndex{
-    border-top: 1px solid lightgray;
-    border-bottom: 1px solid lightgray;
-}
-
 /* Sneakers */
 
 .sneakers{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     text-align: center;
     flex-wrap: wrap;
-    gap: 60px;
-    padding: 20px 100px;
+    gap: 2rem;
+    padding: 1rem 5rem;
 }
 
 .sneakers img{
-    max-height: 100px;
+    max-height: 165px;
     width: auto;
 }
 
@@ -158,24 +166,38 @@ p{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding: 0 100px;
+    gap: 1rem;
+    margin: 0 100px;
+}
+
+.galeriaImg{
+    width: 350px;
+    height: 350px;
+    margin: 5px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
 }
 
 .galeria img{
-    max-height: 450px;
-    width: auto;
-    margin: 5px;
+    object-fit: scale-down;
+    max-height: 350px;
 }
 
 /* Contacto */
 
 .contacto{
     display: flex;
-    justify-content: center;
+    justify-content: start;
+}
+
+.contactoImg{
+    max-width: 50%;
+    overflow: hidden;
 }
 
 .contacto img{
-    width: 500px;
+    object-fit: cover;
 }
 
 .contacto h1, .contacto p{
@@ -184,11 +206,12 @@ p{
 }
 
 .formulario{
-    padding: 20px;
+    padding: 1rem;
 }
 
 /* Footer */
 footer{
+    padding: 1rem;
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
