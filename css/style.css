@@ -156,6 +156,14 @@ p {
     z-index: 0;
 }
 
+.agregarCarrito {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #333333;
+    border-radius: 5px;
+}
+
 /* Sneakers */
 .sneakers {
     display: flex;
@@ -164,11 +172,11 @@ p {
     text-align: center;
     flex-wrap: wrap;
     gap: 2rem;
-    padding: 1rem 5rem;
+    padding: 1rem 1rem;
 }
 
 .sneakers img {
-    max-height: 165px;
+    max-height: 100px;
     width: auto;
 }
 
@@ -206,7 +214,7 @@ p {
 }
 
 #contacto h1,
-#contacto p {
+#contacto h2 {
     text-align: center;
     padding-bottom: 15px;
 }
@@ -219,6 +227,41 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.formulario form div {
+    width: 100%;
+}
+
+input {
+    margin: 5px 0;
+    border: 2px solid #333333;
+    border-radius: 5px;
+    width: 100%;
+    padding: 3px;
+}
+
+textarea {
+    margin: 5px 0;
+    border: 2px solid #333333;
+    border-radius: 5px;
+    width: 100%;
+    padding: 3px;
+}
+
+.btnSend {
+    color: #ffffff;
+    background-color: #333333;
+}
+
+.btnSend:hover {
+    transform: scale(0.99);
+    background-color: #252525;
+    transition: 300ms;
+}
+
+.btnSend {
+    transition: 300ms;
 }
 
 /* Footer */
@@ -279,7 +322,8 @@ footer div img {
             "ofertas ofertas ofertas";
     }
 
-    #sneakers, #ofertas {
+    #sneakers,
+    #ofertas {
         min-height: 100vh;
         display: grid;
         grid-template-columns: auto;
@@ -306,8 +350,7 @@ footer div img {
         display: grid;
         grid-template-columns: 1fr 1.5fr;
         grid-template-rows: auto;
-        grid-template-areas:
-            "bgContacto formulario";
+        grid-template-areas: "bgContacto formulario";
     }
 
     #ayuda {
@@ -360,7 +403,8 @@ footer div img {
         grid-area: destacados;
     }
 
-    main .pIndex, main .parrafos {
+    main .pIndex,
+    main .parrafos {
         grid-area: p;
     }
 
@@ -390,12 +434,12 @@ footer div img {
         max-height: 200px;
     }
 
-    header nav ul li:hover{
+    header nav ul li:hover {
         transform: scale(1.2);
         transition: 300ms;
     }
 
-    header nav ul li{
+    header nav ul li {
         transition: 1250ms;
     }
 
@@ -442,17 +486,19 @@ footer div img {
         width: auto;
     }
 
-    .agregarCarrito {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: 2px solid #333333;
-        border-radius: 5px;
+    /* Sneakers */
+    .sneakers {
+        padding: 1rem 5rem;
+    }
+
+    .sneakers img {
+        max-height: 165px;
+        width: auto;
     }
 
     /* Contacto */
     #contacto h1,
-    #contacto p {
+    #contacto h2 {
         text-align: start;
         padding-bottom: 15px;
     }
@@ -460,15 +506,16 @@ footer div img {
     .formulario {
         padding: 1rem;
     }
-    
+
     .formulario form {
         overflow: hidden;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        width: 100%;
     }
 
-    .bgContacto{
+    .bgContacto {
         display: block;
         background-image: url(../images/contacto.png);
         background-size: cover;
