@@ -505,6 +505,9 @@ footer div img {
 
     .formulario {
         padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .formulario form {
