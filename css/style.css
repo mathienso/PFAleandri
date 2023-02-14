@@ -1,0 +1,244 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+a:link {
+  color: black;
+  text-decoration: none; }
+
+a:visited {
+  color: black;
+  text-decoration: none; }
+
+/* Reset bootstrap */
+ul {
+  margin: 0; }
+
+/* Generales */
+body {
+  background-color: #ffffff;
+  font-family: "Roboto", sans-serif; }
+
+main {
+  min-height: 100vh; }
+
+h1 {
+  font-family: "Permanent Marker", cursive;
+  color: black;
+  font-size: 4rem;
+  text-align: center;
+  margin: 0; }
+
+h2 {
+  font-size: 1.5rem;
+  margin: 0; }
+
+h3 {
+  font-size: 1.3rem;
+  margin: 0; }
+
+h4 {
+  font-size: 1rem;
+  margin: 0; }
+
+h5 {
+  font-size: 0.9rem;
+  margin: 0; }
+
+.sneakyFont {
+  font-family: "Permanent Marker", cursive; }
+
+.parrafos,
+.pIndex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 2rem; }
+
+/* Header */
+header {
+  z-index: 1;
+  background-color: #ffffff;
+  position: sticky;
+  top: 0; }
+
+.logo {
+  font-family: "Permanent Marker", cursive; }
+
+.headerTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  border-bottom: 1px solid lightgray; }
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px; }
+  .options input {
+    display: none; }
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+  gap: 20px;
+  border-bottom: 1px solid lightgray; }
+
+.subHeader {
+  text-align: center;
+  background-color: #333333; }
+  .subHeader h1 {
+    font-family: "Permanent Marker", cursive;
+    color: white;
+    font-size: 2rem; }
+  .subHeader img {
+    width: auto;
+    max-height: 100px; }
+
+.navDesktop {
+  display: none; }
+
+.info {
+  display: none; }
+
+/* Index */
+h2 {
+  text-align: center;
+  padding: 10px; }
+
+p {
+  text-align: center;
+  max-width: 600px;
+  margin: 0; }
+
+.destacados {
+  display: none; }
+
+#carouselDestacados {
+  z-index: 0; }
+
+#carouselOfertas {
+  z-index: 0; }
+
+.agregarCarrito {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #333333;
+  border-radius: 5px; }
+
+/* Footer */
+footer {
+  padding: 1rem;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-top: 1px solid lightgray; }
+
+.footerInfo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px; }
+
+.footerItem {
+  display: flex;
+  flex-flow: column nowrap; }
+
+footer div img {
+  width: auto;
+  max-height: 25px; }
+
+.copy {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+/* pantallas de escritorio */
+@media screen and (min-width: 1024px) {
+  /* Generales */
+  .parrafos,
+  .pIndex {
+    padding: 0;
+    margin: 3rem 0; }
+  /* Grid */
+  #index {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: "subHeader subHeader subHeader" "info info info" "h2 h2 h2" "destacados destacados destacados" "p p p" "hOfertas hOfertas hOfertas" "ofertas ofertas ofertas"; }
+  main .subHeader {
+    grid-area: subHeader; }
+  main .info {
+    grid-area: info; }
+  main h2 {
+    grid-area: h2; }
+  main .hOfertas {
+    grid-area: hOfertas; }
+  main .sneakersDestacadas {
+    grid-area: destacados; }
+  main .pIndex {
+    grid-area: p; }
+  main .ofertas {
+    grid-area: ofertas; }
+  /* Header */
+  .navMobile {
+    display: none; }
+  .navDesktop {
+    display: block; }
+  .headerTop {
+    padding: 1rem; }
+  .subHeader h1 {
+    font-size: 4rem; }
+  .subHeader img {
+    width: auto;
+    max-height: 200px; }
+  header nav ul li {
+    transition: 1250ms; }
+    header nav ul li:hover {
+      transform: scale(1.2);
+      transition: 300ms; }
+  /* Index */
+  .info {
+    display: block;
+    border-bottom: 1px solid lightgray; }
+    .info ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+      align-items: center; }
+      .info ul li {
+        display: flex;
+        align-items: center;
+        padding: 15px; }
+  #carouselDestacados {
+    display: none; }
+  #carouselOfertas {
+    display: none; }
+  .destacados {
+    display: block;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 1rem;
+    margin: 0 200px; }
+    .destacados img {
+      max-height: 115px;
+      width: auto; }
+  /* Footer */
+  footer {
+    align-items: stretch;
+    text-align: start; }
+  .footerInfo {
+    flex-direction: row;
+    justify-content: space-around; } }
