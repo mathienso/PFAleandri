@@ -1,0 +1,13 @@
+.sneakers {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 1rem 1rem;
+    img {
+        max-height: 100px;
+        width: auto;
+    }
+}

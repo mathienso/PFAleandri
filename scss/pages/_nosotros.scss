@@ -1,0 +1,20 @@
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1rem;
+    margin: 0 100px;
+    img {
+        object-fit: scale-down;
+        max-height: 350px;
+    }
+}
+
+.galeriaImg {
+    width: 350px;
+    height: 350px;
+    margin: 5px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
