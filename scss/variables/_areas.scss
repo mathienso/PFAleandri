@@ -1,0 +1,48 @@
+main h1 {
+    grid-area: h1;
+}
+
+main .formulario {
+    grid-area: formulario;
+}
+
+main .bgContacto {
+    grid-area: bgContacto;
+}
+
+.galeria {
+    grid-area: galeria;
+}
+
+main .sneakers {
+    grid-area: sneakers;
+}
+
+main .subHeader {
+    grid-area: subHeader;
+}
+
+main .info {
+    grid-area: info;
+}
+
+main h2 {
+    grid-area: h2;
+}
+
+main .hOfertas {
+    grid-area: hOfertas;
+}
+
+main .sneakersDestacadas {
+    grid-area: destacados;
+}
+
+main .pIndex,
+main .parrafos {
+    grid-area: p;
+}
+
+main .ofertas {
+    grid-area: ofertas;
+}

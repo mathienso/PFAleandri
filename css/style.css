@@ -1,3 +1,147 @@
+.sneakers {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 1rem 1rem; }
+  .sneakers img {
+    max-height: 100px;
+    width: auto; }
+
+/* pantallas de escritorio */
+@media screen and (min-width: 1024px) {
+  /* Generales */
+  .parrafos,
+  .pIndex {
+    padding: 0;
+    margin: 3rem 0; }
+  /* Grid */
+  #sneakers {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: "subHeader subHeader subHeader" "sneakers sneakers sneakers"; }
+  /* Sneakers */
+  .sneakers {
+    padding: 1rem 5rem; }
+    .sneakers img {
+      max-height: 165px;
+      width: auto; } }
+
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1rem;
+  margin: 0 100px; }
+  .galeria img {
+    object-fit: scale-down;
+    max-height: 350px; }
+
+.galeriaImg {
+  width: 350px;
+  height: 350px;
+  margin: 5px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center; }
+
+/* pantallas de escritorio */
+@media screen and (min-width: 1024px) {
+  /* Generales */
+  .parrafos,
+  .pIndex {
+    padding: 0;
+    margin: 3rem 0; }
+  /* Grid */
+  #nosotros {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: "subHeader subHeader subHeader" "p p p" "h2 h2 h2" "galeria galeria galeria"; } }
+
+#contacto {
+  display: flex;
+  justify-content: center; }
+  #contacto h1 {
+    text-align: center;
+    padding-bottom: 15px; }
+  #contacto h2 {
+    text-align: center;
+    padding-bottom: 15px; }
+
+.bgContacto {
+  display: none; }
+
+.formulario {
+  padding: 1rem; }
+  .formulario form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .formulario div {
+    width: 100%; }
+
+input {
+  margin: 5px 0;
+  border: 2px solid #333333;
+  border-radius: 5px;
+  width: 100%;
+  padding: 3px; }
+
+textarea {
+  margin: 5px 0;
+  border: 2px solid #333333;
+  border-radius: 5px;
+  width: 100%;
+  padding: 3px; }
+
+.btnSend {
+  color: #ffffff;
+  background-color: #333333;
+  transition: 300ms; }
+  .btnSend:hover {
+    transform: scale(0.99);
+    background-color: #252525;
+    transition: 300ms; }
+
+/* pantallas de escritorio */
+@media screen and (min-width: 1024px) {
+  /* Generales */
+  .parrafos,
+  .pIndex {
+    padding: 0;
+    margin: 3rem 0; }
+  /* Grid */
+  #contacto {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-rows: auto;
+    grid-template-areas: "bgContacto formulario"; }
+  #contacto h1, #contacto h2 {
+    text-align: start;
+    padding-bottom: 15px; }
+  .formulario {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .formulario form {
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%; }
+  .bgContacto {
+    display: block;
+    background-image: url(../images/contacto.png);
+    background-size: cover; } }
+
 /* Reset */
 * {
   margin: 0;

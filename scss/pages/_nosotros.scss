@@ -18,3 +18,26 @@
     display: flex;
     justify-content: center;
 }
+
+/* pantallas de escritorio */
+@media screen and (min-width: 1024px) {
+    /* Generales */
+    .parrafos,
+    .pIndex {
+        padding: 0;
+        margin: 3rem 0;
+    }
+
+    /* Grid */
+    #nosotros {
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "subHeader subHeader subHeader"
+            "p p p"
+            "h2 h2 h2"
+            "galeria galeria galeria";
+    }
+}

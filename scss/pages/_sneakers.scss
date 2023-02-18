@@ -11,3 +11,33 @@
         width: auto;
     }
 }
+
+/* pantallas de escritorio */
+@media screen and (min-width: 1024px) {
+    /* Generales */
+    .parrafos,
+    .pIndex {
+        padding: 0;
+        margin: 3rem 0;
+    }
+
+    /* Grid */
+    #sneakers {
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "subHeader subHeader subHeader"
+            "sneakers sneakers sneakers";
+    }
+
+    /* Sneakers */
+    .sneakers {
+        padding: 1rem 5rem;
+        img {
+            max-height: 165px;
+            width: auto;
+        }
+    }
+}

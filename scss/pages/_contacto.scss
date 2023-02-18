@@ -53,3 +53,49 @@ textarea {
         transition: 300ms;
     }
 }
+
+/* pantallas de escritorio */
+@media screen and (min-width: 1024px) {
+    /* Generales */
+    .parrafos,
+    .pIndex {
+        padding: 0;
+        margin: 3rem 0;
+    }
+
+    /* Grid */
+    #contacto {
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        grid-template-rows: auto;
+        grid-template-areas: "bgContacto formulario";
+    }
+
+    #contacto {
+        h1,h2 {
+            text-align: start;
+            padding-bottom: 15px;
+        }
+    }
+
+    .formulario {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        form {
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+        }
+    }
+
+    .bgContacto {
+        display: block;
+        background-image: url(../images/contacto.png);
+        background-size: cover;
+    }
+}
