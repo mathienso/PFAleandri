@@ -1,48 +1,39 @@
-main h1 {
-    grid-area: h1;
-}
-
-main .formulario {
-    grid-area: formulario;
-}
-
-main .bgContacto {
-    grid-area: bgContacto;
-}
-
-.galeria {
-    grid-area: galeria;
-}
-
-main .sneakers {
-    grid-area: sneakers;
-}
-
-main .subHeader {
-    grid-area: subHeader;
-}
-
-main .info {
-    grid-area: info;
-}
-
-main h2 {
-    grid-area: h2;
-}
-
-main .hOfertas {
-    grid-area: hOfertas;
-}
-
-main .sneakersDestacadas {
-    grid-area: destacados;
-}
-
-main .pIndex,
-main .parrafos {
-    grid-area: p;
-}
-
-main .ofertas {
-    grid-area: ofertas;
+main {
+    h1 {
+        grid-area: h1;
+    }
+    .formulario {
+        grid-area: formulario;
+    }
+    .bgContacto {
+        grid-area: bgContacto;
+    }
+    .galeria {
+        grid-area: galeria;
+    }
+    .sneakers {
+        grid-area: sneakers;
+    }
+    .subHeader {
+        grid-area: subHeader;
+    }
+    .info {
+        grid-area: info;
+    }
+    h2 {
+        grid-area: h2;
+    }
+    .hOfertas {
+        grid-area: hOfertas;
+    }
+    .sneakersDestacadas {
+        grid-area: destacados;
+    }
+    .pIndex,
+    .parrafos {
+        grid-area: p;
+    }
+    .ofertas {
+        grid-area: ofertas;
+    }
 }

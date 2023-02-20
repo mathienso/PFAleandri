@@ -1,3 +1,41 @@
+main h1 {
+  grid-area: h1; }
+
+main .formulario {
+  grid-area: formulario; }
+
+main .bgContacto {
+  grid-area: bgContacto; }
+
+main .galeria {
+  grid-area: galeria; }
+
+main .sneakers {
+  grid-area: sneakers; }
+
+main .subHeader {
+  grid-area: subHeader; }
+
+main .info {
+  grid-area: info; }
+
+main h2 {
+  grid-area: h2; }
+
+main .hOfertas {
+  grid-area: hOfertas; }
+
+main .sneakersDestacadas {
+  grid-area: destacados; }
+
+main .pIndex,
+main .parrafos,
+main .pIndex {
+  grid-area: p; }
+
+main .ofertas {
+  grid-area: ofertas; }
+
 .sneakers {
   display: flex;
   justify-content: space-around;
@@ -13,7 +51,7 @@
 /* pantallas de escritorio */
 @media screen and (min-width: 1024px) {
   /* Generales */
-  .parrafos,
+  .parrafos, .pIndex,
   .pIndex {
     padding: 0;
     margin: 3rem 0; }
@@ -30,6 +68,15 @@
     .sneakers img {
       max-height: 165px;
       width: auto; } }
+
+.sneaker div, .ofertas .itemDestacado div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: end;
+  gap: 0.2rem; }
+  .sneaker div h5, .ofertas .itemDestacado div h5 {
+    text-decoration: line-through; }
 
 .galeria {
   display: flex;
@@ -52,7 +99,7 @@
 /* pantallas de escritorio */
 @media screen and (min-width: 1024px) {
   /* Generales */
-  .parrafos,
+  .parrafos, .pIndex,
   .pIndex {
     padding: 0;
     margin: 3rem 0; }
@@ -63,6 +110,20 @@
     grid-template-columns: auto;
     grid-template-rows: auto;
     grid-template-areas: "subHeader subHeader subHeader" "p p p" "h2 h2 h2" "galeria galeria galeria"; } }
+
+ol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; }
+
+@media screen and (min-width: 1024px) {
+  #ayuda {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: "h1" "p"; } }
 
 #contacto {
   display: flex;
@@ -86,14 +147,7 @@
   .formulario div {
     width: 100%; }
 
-input {
-  margin: 5px 0;
-  border: 2px solid #333333;
-  border-radius: 5px;
-  width: 100%;
-  padding: 3px; }
-
-textarea {
+input, textarea {
   margin: 5px 0;
   border: 2px solid #333333;
   border-radius: 5px;
@@ -112,7 +166,7 @@ textarea {
 /* pantallas de escritorio */
 @media screen and (min-width: 1024px) {
   /* Generales */
-  .parrafos,
+  .parrafos, .pIndex,
   .pIndex {
     padding: 0;
     margin: 3rem 0; }
@@ -123,9 +177,9 @@ textarea {
     grid-template-columns: 1fr 1.5fr;
     grid-template-rows: auto;
     grid-template-areas: "bgContacto formulario"; }
-  #contacto h1, #contacto h2 {
-    text-align: start;
-    padding-bottom: 15px; }
+    #contacto h1, #contacto h2 {
+      text-align: start;
+      padding-bottom: 15px; }
   .formulario {
     padding: 1rem;
     display: flex;
@@ -171,8 +225,8 @@ main {
 h1 {
   font-family: "Permanent Marker", cursive;
   color: black;
-  font-size: 4rem;
   text-align: center;
+  font-size: 4rem;
   margin: 0; }
 
 h2 {
@@ -194,12 +248,15 @@ h5 {
 .sneakyFont {
   font-family: "Permanent Marker", cursive; }
 
-.parrafos,
-.pIndex {
+.parrafos, .pIndex {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 1rem 2rem; }
+
+.pIndex {
+  font-size: 1.3rem;
+  font-weight: 350; }
 
 /* Header */
 header {
@@ -223,7 +280,7 @@ header {
   justify-content: space-between;
   align-items: center;
   gap: 10px; }
-  .options input {
+  .options input, .options textarea {
     display: none; }
 
 header nav ul {
@@ -258,7 +315,7 @@ h2 {
 
 p {
   text-align: center;
-  max-width: 600px;
+  max-width: 750px;
   margin: 0; }
 
 .destacados {
@@ -308,7 +365,7 @@ footer div img {
 /* pantallas de escritorio */
 @media screen and (min-width: 1024px) {
   /* Generales */
-  .parrafos,
+  .parrafos, .pIndex,
   .pIndex {
     padding: 0;
     margin: 3rem 0; }
@@ -319,20 +376,6 @@ footer div img {
     grid-template-columns: auto;
     grid-template-rows: auto;
     grid-template-areas: "subHeader subHeader subHeader" "info info info" "h2 h2 h2" "destacados destacados destacados" "p p p" "hOfertas hOfertas hOfertas" "ofertas ofertas ofertas"; }
-  main .subHeader {
-    grid-area: subHeader; }
-  main .info {
-    grid-area: info; }
-  main h2 {
-    grid-area: h2; }
-  main .hOfertas {
-    grid-area: hOfertas; }
-  main .sneakersDestacadas {
-    grid-area: destacados; }
-  main .pIndex {
-    grid-area: p; }
-  main .ofertas {
-    grid-area: ofertas; }
   /* Header */
   .navMobile {
     display: none; }
@@ -375,7 +418,7 @@ footer div img {
     text-align: center;
     gap: 1rem;
     padding: 1rem;
-    margin: 0 200px; }
+    margin: 0 0; }
     .destacados img {
       max-height: 115px;
       width: auto; }

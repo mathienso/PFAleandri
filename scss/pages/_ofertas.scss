@@ -1,0 +1,12 @@
+.sneaker {
+    div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: end;
+        gap: 0.2rem;
+        h5 {
+            text-decoration: line-through;
+        }
+    }
+}

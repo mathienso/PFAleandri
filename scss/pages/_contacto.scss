@@ -1,3 +1,5 @@
+@import "../variables/variables";
+
 #contacto {
     display: flex;
     justify-content: center;
@@ -29,23 +31,19 @@
 
 input {
     margin: 5px 0;
-    border: 2px solid #333333;
+    border: $primaryBorder;
     border-radius: 5px;
     width: 100%;
     padding: 3px;
 }
 
 textarea {
-    margin: 5px 0;
-    border: 2px solid #333333;
-    border-radius: 5px;
-    width: 100%;
-    padding: 3px;
+    @extend input;
 }
 
 .btnSend {
     color: #ffffff;
-    background-color: #333333;
+    background-color: $primaryColor;
     transition: 300ms;
     &:hover {
         transform: scale(0.99);
@@ -65,14 +63,7 @@ textarea {
 
     /* Grid */
     #contacto {
-        min-height: 100vh;
-        display: grid;
-        grid-template-columns: 1fr 1.5fr;
-        grid-template-rows: auto;
-        grid-template-areas: "bgContacto formulario";
-    }
-
-    #contacto {
+        @include grid("bgContacto formulario", 1fr 1.5fr);
         h1,h2 {
             text-align: start;
             padding-bottom: 15px;

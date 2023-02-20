@@ -1,6 +1,7 @@
 //Archivo configurado para que se compile en css/style.css
 //Se llaman todos los import
 @import "variables/variables";
+@import "variables/areas";
 @import "pages/sneakers";
 @import "pages/ofertas";
 @import "pages/nosotros";
@@ -43,41 +44,41 @@ main {
 h1 {
     font-family: $logoFont;
     color: black;
-    font-size: 4rem;
     text-align: center;
-    margin: 0;
+    @include headers(4rem);
 }
 
 h2 {
-    font-size: 1.5rem;
-    margin: 0;
+    @include headers(1.5rem);
 }
 
 h3 {
-    font-size: 1.3rem;
-    margin: 0;
+    @include headers(1.3rem);
 }
 
 h4 {
-    font-size: 1rem;
-    margin: 0;
+    @include headers(1rem);
 }
 
 h5 {
-    font-size: 0.9rem;
-    margin: 0;
+    @include headers(0.9rem);
 }
 
 .sneakyFont {
     font-family: $logoFont;
 }
 
-.parrafos,
-.pIndex {
+.parrafos {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 1rem 2rem;
+}
+
+.pIndex {
+    @extend .parrafos;
+    font-size: 1.3rem;
+    font-weight: 350;
 }
 
 /* Header */
@@ -125,7 +126,7 @@ header {
 
 .subHeader {
     text-align: center;
-    background-color: #333333;
+    background-color: $primaryColor;
     h1 {
         font-family: $logoFont;
         color: white;
@@ -153,12 +154,18 @@ h2 {
 
 p {
     text-align: center;
-    max-width: 600px;
+    max-width: 750px;
     margin: 0;
 }
 
 .destacados {
     display: none;
+}
+
+.ofertas {
+    .itemDestacado {
+        @extend .sneaker;
+    }
 }
 
 #carouselDestacados {
@@ -173,7 +180,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid #333333;
+    border: $primaryBorder;
     border-radius: 5px;
 }
 
@@ -225,42 +232,13 @@ footer {
 
     /* Grid */
     #index {
-        min-height: 100vh;
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: auto;
-        grid-template-areas:
-            "subHeader subHeader subHeader"
-            "info info info"
-            "h2 h2 h2"
-            "destacados destacados destacados"
-            "p p p"
-            "hOfertas hOfertas hOfertas"
-            "ofertas ofertas ofertas";
-    }
-
-    main {
-        .subHeader {
-            grid-area: subHeader;
-        }
-        .info {
-            grid-area: info;
-        }
-        h2 {
-            grid-area: h2;
-        }
-        .hOfertas {
-            grid-area: hOfertas;
-        }
-        .sneakersDestacadas {
-            grid-area: destacados;
-        }
-        .pIndex {
-            grid-area: p;
-        }
-        .ofertas {
-            grid-area: ofertas;
-        }
+        @include grid("subHeader subHeader subHeader"
+        "info info info"
+        "h2 h2 h2"
+        "destacados destacados destacados"
+        "p p p"
+        "hOfertas hOfertas hOfertas"
+        "ofertas ofertas ofertas", auto);
     }
 
     /* Header */
@@ -333,7 +311,7 @@ footer {
         text-align: center;
         gap: 1rem;
         padding: 1rem;
-        margin: 0 200px;
+        margin: 0 0;
         img {
             max-height: 115px;
             width: auto;

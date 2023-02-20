@@ -1,2 +1,19 @@
 //variables para utilizar en el resto de los .scss
 $logoFont: "Permanent Marker", cursive;
+$primaryColor: #333333;
+$primaryBorder: 2px solid $primaryColor;
+
+
+//mixins
+@mixin headers ($size) {
+    font-size: $size;
+    margin: 0;
+}
+
+@mixin grid ($areas, $columns) {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: $columns;
+    grid-template-rows: auto;
+    grid-template-areas: $areas;
+}

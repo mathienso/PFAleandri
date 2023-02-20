@@ -1,3 +1,5 @@
+@import "../variables/variables";
+
 .sneakers {
     display: flex;
     justify-content: space-around;
@@ -23,13 +25,8 @@
 
     /* Grid */
     #sneakers {
-        min-height: 100vh;
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: auto;
-        grid-template-areas:
-            "subHeader subHeader subHeader"
-            "sneakers sneakers sneakers";
+        @include grid("subHeader subHeader subHeader"
+        "sneakers sneakers sneakers", auto);
     }
 
     /* Sneakers */
