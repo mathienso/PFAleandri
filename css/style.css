@@ -45,8 +45,16 @@ main .ofertas {
   gap: 2rem;
   padding: 1rem 1rem; }
   .sneakers img {
-    max-height: 100px;
+    max-height: 130px;
     width: auto; }
+
+/* pantallas de tablet */
+@media screen and (min-width: 600px) {
+  .sneakers {
+    padding: 1rem 5rem; }
+    .sneakers img {
+      max-height: 135px;
+      width: auto; } }
 
 /* pantallas de escritorio */
 @media screen and (min-width: 1024px) {
@@ -94,6 +102,11 @@ main .ofertas {
   margin: 5px;
   overflow: hidden;
   display: flex;
+  justify-content: center; }
+
+.parrafos div, .pIndex div {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center; }
 
 /* pantallas de escritorio */
@@ -321,6 +334,9 @@ p {
 .destacados {
   display: none; }
 
+.tablet {
+  display: none; }
+
 #carouselDestacados {
   z-index: 0; }
 
@@ -361,6 +377,26 @@ footer div img {
   display: flex;
   justify-content: center;
   align-items: center; }
+
+/* pantallas de tablet */
+@media screen and (min-width: 600px) {
+  /* Index */
+  #carouselDestacados {
+    display: none; }
+  #carouselOfertas {
+    display: none; }
+  .tablet {
+    display: block;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 1rem;
+    margin: 0 0; }
+    .tablet img {
+      max-height: 115px;
+      width: auto; } }
 
 /* pantallas de escritorio */
 @media screen and (min-width: 1024px) {
@@ -409,6 +445,8 @@ footer div img {
   #carouselDestacados {
     display: none; }
   #carouselOfertas {
+    display: none; }
+  .tablet {
     display: none; }
   .destacados {
     display: block;

@@ -162,6 +162,10 @@ p {
     display: none;
 }
 
+.tablet {
+    display: none;
+}
+
 .ofertas {
     .itemDestacado {
         @extend .sneaker;
@@ -219,6 +223,33 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* pantallas de tablet */
+@media screen and (min-width:600px){
+    /* Index */
+    #carouselDestacados {
+        display: none;
+    }
+
+    #carouselOfertas {
+        display: none;
+    }
+
+    .tablet {
+        display: block;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+        padding: 1rem;
+        margin: 0 0;
+        img {
+            max-height: 115px;
+            width: auto;
+        }
+    }
 }
 
 /* pantallas de escritorio */
@@ -300,6 +331,10 @@ footer {
     }
 
     #carouselOfertas {
+        display: none;
+    }
+
+    .tablet { 
         display: none;
     }
 
