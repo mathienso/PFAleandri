@@ -91,7 +91,7 @@ main .ofertas {
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 1rem;
-  margin: 0 100px; }
+  margin: 0 10px; }
   .galeria img {
     object-fit: scale-down;
     max-height: 350px; }
@@ -110,6 +110,11 @@ main .ofertas {
   justify-content: center; }
 
 /* pantallas de escritorio */
+@media screen and (min-width: 600px) {
+  .galeria {
+    margin: 0 100px; } }
+
+/* pantallas de escritorio */
 @media screen and (min-width: 1024px) {
   /* Generales */
   .parrafos, .pIndex,
@@ -124,11 +129,15 @@ main .ofertas {
     grid-template-rows: auto;
     grid-template-areas: "subHeader subHeader subHeader" "p p p" "h2 h2 h2" "galeria galeria galeria"; } }
 
-ol {
+.pregunta {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center; }
+  justify-content: start;
+  align-items: start;
+  text-align: start;
+  margin: 5px; }
+  .pregunta img {
+    max-width: 100%; }
 
 @media screen and (min-width: 1024px) {
   #ayuda {
@@ -136,7 +145,9 @@ ol {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
-    grid-template-areas: "h1" "p"; } }
+    grid-template-areas: "h1" "p"; }
+  .pregunta {
+    width: 50%; } }
 
 #contacto {
   display: flex;
