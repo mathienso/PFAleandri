@@ -95,10 +95,12 @@
                 <div class="options">
                     <input type="text" name="search" placeholder="Buscar" />
                     <img src="images/person_small.png" alt="icono de persona" />
-                    <img
-                        src="images/cart_small.png"
-                        alt="icono de carrito de compras"
-                    />
+                    <a id="openCart" href="#">
+                        <img
+                            src="images/cart_small.png"
+                            alt="icono de carrito de compras"
+                        />
+                    </a>
                 </div>
             </div>
             <nav class="navDesktop">
@@ -111,6 +113,14 @@
                     <li><a href="pages/ayuda.html">Ayuda</a></li>
                 </ul>
             </nav>
+            <div id="cart" class="cart">
+                <a href="#" id="closeCart" class="closeCart">×</a>
+                <ul id="cartContent" class="cartContent">
+                </ul>
+                <div class="buy">
+                    <input id="buy" class="buy" type="submit" value="Comprar" />
+                </div>
+            </div>
         </header>
         <main id="index">
             <!-- Subheader con imagen y titulo -->
@@ -266,15 +276,16 @@
                     </a>
                 </div>
             </div>
+            <!-- Desktop -->
             <div class="destacados sneakersDestacadas">
                 <div class="itemDestacado">
                     <img
                         src="images/sneakers/Air-Jordan-1-Low-Black-Active-Fuchsia-433x433.jpg"
                         alt="Air Jordan 1 Low Black Active Fuchsia"
                     />
-                    <h5>Air Jordan 1 Low Black Active Fuchsia</h5>
-                    <h4>$270</h4>
-                    <a href="">
+                    <h5></h5>
+                    <h4></h4>
+                    <a class="addCart" href="#">
                         <div class="agregarCarrito">
                             <img
                                 src="images/cart_small.png"
@@ -289,9 +300,9 @@
                         src="images/sneakers/Air-Jordan-1-Low-Black-Guava-Ice-W-433x433.jpg"
                         alt="Air Jordan 1 Low Black Guava Ice W"
                     />
-                    <h5>Air Jordan 1 Low Black Guava Ice W</h5>
-                    <h4>$315</h4>
-                    <a href="">
+                    <h5></h5>
+                    <h4></h4>
+                    <a class="addCart" href="#">
                         <div class="agregarCarrito">
                             <img
                                 src="images/cart_small.png"
@@ -306,9 +317,9 @@
                         src="images/sneakers/Air-Jordan-1-Low-Vintage-Stealth-Grey.jpg"
                         alt="Air Jordan 1 Low Vintage Stealth Grey"
                     />
-                    <h5>Air Jordan 1 Low Vintage Stealth Grey</h5>
-                    <h4>$230</h4>
-                    <a href="">
+                    <h5></h5>
+                    <h4></h4>
+                    <a class="addCart" href="#">
                         <div class="agregarCarrito">
                             <img
                                 src="images/cart_small.png"
@@ -323,9 +334,9 @@
                         src="images/sneakers/Air-Jordan-1-Mid-Neutral-Grey-433x433.jpg"
                         alt="Air Jordan 1 Mid Neutral Grey"
                     />
-                    <h5>Air Jordan 1 Mid Neutral Grey</h5>
-                    <h4>$200</h4>
-                    <a href="">
+                    <h5></h5>
+                    <h4></h4>
+                    <a class="addCart" href="#">
                         <div class="agregarCarrito">
                             <img
                                 src="images/cart_small.png"
@@ -557,6 +568,15 @@
                             <span>Agregar al carrito</span>
                         </div>
                     </a>
+                </div>
+            </div>
+            <div class="notifContainer">
+                <div id="addCartNotif" class="cartNotif">
+                    <h3>Se añadió el item al carrito</h3>
+                    <a href="#" id="closeAddCartNotif" class="closeAddCartNotif">×</a>
+                </div>
+                <div id="ticket" class="ticket">
+                    <a href="#" id="closeTicket" class="closeTicket">×</a>
                 </div>
             </div>
         </main>

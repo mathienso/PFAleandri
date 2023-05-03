@@ -146,6 +146,132 @@ header {
     display: none;
 }
 
+/* Cart */
+
+.cart {
+    position: fixed;
+    height: 100%;
+    width: 0;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    transition: 0.4s;
+    padding: 1rem 0;
+    box-sizing:border-box;
+}
+
+.cart .closeCart {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    font-size: 2rem;
+    display: block;
+    padding: 0;
+    line-height: 1.5rem;
+    margin: 0;
+    height: 32px;
+    width: 32px;
+    text-align: center;
+    vertical-align: top;
+}
+
+.cart ul, .cart li{
+    margin:0;
+    padding:0;
+    list-style:square inside;
+}
+
+.cart ul {
+    margin: 4rem auto;
+    display: block;
+    width: 80%;
+    min-width:200px;
+}
+
+.cart a {
+    display: block;
+}
+
+#abrir {
+    
+}
+
+#cerrar {
+    display:none;
+}
+
+#buy {
+    display: none;
+}
+
+.buy {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+.buy input {
+    width: 70%;
+}
+
+/* Cart Notif */
+.notifContainer {
+    position: fixed;
+    width: 100%;
+    height: 20rem;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+.cartNotif {
+    position: fixed;
+    height: 3rem;
+    width: 20rem;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    background-color: #ffffff;
+    transition: 2s;
+    display: none;
+    border: $primaryBorder;
+    border-radius: 1.5rem;
+}
+
+.cartNotif h3 {
+    color: #6cbf6c;
+}
+
+.closeAddCartNotif {
+    font-size: 2rem;
+    margin: 0 0.5rem;
+}
+
+.ticket {
+    position: fixed;
+    height: 15rem;
+    width: 35rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    background-color: #ffffff;
+    transition: 2s;
+    display: none;
+    border: $primaryBorder;
+    border-radius: 1.5rem;
+}
+
+.ticket h3 {
+    color: $primaryColor;
+}
+
+.closeTicket {
+    font-size: 2rem;
+    margin: 0 0.5rem;
+}
+
 /* Index */
 h2 {
     text-align: center;

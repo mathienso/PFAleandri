@@ -15,11 +15,21 @@ Como ser los siguientes:
 * Formas de interactuar con el usuario, con prompt y alert.
 * Clases y Objetos.
 * Arrays.
+* JSON y LocalStorage
+* Eventos
+* Interacción con el DOM
 
-Funcionalidad pre entrega 2 -> Comprar sneakers:
-1. Crear un programa que pida al usuario ingresar nombre y valor de un producto (zapatillas en mi caso) la cantidad de veces que quiera.
-2. Se debe dejar vacío el nombre del producto para finalizar la compra.
-3. Mostrar precio final, cantidad y lista de productos.
+Funcionalidad pre entrega 3 -> Comprar sneakers:
+1. Conectar las funcionalidades creadas anteriormente con el DOM.
 
-## Notas
-No se añaden validaciones de nombre y precio ya que en las primeras entregas los ingresa el usuario y en el proyecto final esto no sucederá.
+## Cómo funciona
+1. Clickear en "Agregar al carrito" en alguna zapatilla que se encuentre en "Destacados" del index.
+2. En la esquina superior derecha clickear el icono de bolsa de compras.
+3. Agregar más zapatillas o finalizar la compra presionando "comprar".
+
+## Notas y Bugs
+* Solo funcionan los botones de zapatillas en "Destacados" del index.
+* No se puede cerrar el "ticket" de compra.
+* Todavía no se pueden borrar items del carrito.
+* Luego de comprar no se resetea el carrito.
+* El localStorage por el momento almacena una zapatilla por modelo (no se pueden añadir 2 zapatillas iguales).
