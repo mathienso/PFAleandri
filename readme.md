@@ -18,9 +18,8 @@ Como ser los siguientes:
 * JSON y LocalStorage
 * Eventos
 * Interacción con el DOM
-
-Funcionalidad pre entrega 3 -> Comprar sneakers:
-1. Conectar las funcionalidades creadas anteriormente con el DOM.
+* Manejo de promesas con fetch
+* Carga de datos mediante JSON local
 
 ## Cómo funciona
 1. Clickear en "Agregar al carrito" en alguna zapatilla que se encuentre en "Destacados" del index.
@@ -29,7 +28,3 @@ Funcionalidad pre entrega 3 -> Comprar sneakers:
 
 ## Notas y Bugs
 * Solo funcionan los botones de zapatillas en "Destacados" del index.
-* No se puede cerrar el "ticket" de compra.
-* Todavía no se pueden borrar items del carrito.
-* Luego de comprar no se resetea el carrito.
-* El localStorage por el momento almacena una zapatilla por modelo (no se pueden añadir 2 zapatillas iguales).
